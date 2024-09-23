@@ -65,7 +65,7 @@
                         <div class="d-flex w-100 news-hover" style="gap: 12px; @if($loop->index==0)  margin-top: -2px; @else margin-top: 3px; @endif padding: 10px;
     margin-left: -10px;
     border-radius: 10px;">
-                            <img src="{{\Illuminate\Support\Facades\Storage::url($other->image)}}" style="border-radius: 12px; min-width: 132px; max-width: 132px; min-height: 90px; max-height: 90px" alt="">
+                            <img class="d-block" src="{{\Illuminate\Support\Facades\Storage::url($other->image)}}" style="border-radius: 12px; min-width: 132px; max-width: 132px; min-height: 90px; max-height: 90px" alt="">
                             <div>
                                 <p style="line-height: 1.4 ; width: 169px;margin-bottom: 4px; font-size: 14px; color: var(--Light-White, #E4E4E4); overflow: hidden;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;align-self: stretch;text-overflow: ellipsis;">{{$other->title}}</p>
 
