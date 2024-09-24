@@ -152,7 +152,7 @@
             <div class="search-mobile">
                 @foreach($news as $currentNews)
                     <div class="d-flex w-100" style="gap: 12px; margin-top: 24px;">
-                        <img src="{{\Illuminate\Support\Facades\Storage::url($currentNews->image)}}" width="132px" style="border-radius: 12px; height: 105px;" alt="">
+                        <img src="{{\Illuminate\Support\Facades\Storage::url($currentNews->image)}}" width="132px" style="border-radius: 12px; height: 105px; max-width:132px; min-width:132px" alt="">
                         <div>
                             <p style=" margin-bottom: 4px; font-size: 14px; color: var(--Light-White, #E4E4E4); overflow: hidden;display: -webkit-box;
 -webkit-box-orient: vertical;
@@ -224,7 +224,7 @@ align-self: stretch;">{{$currentNews->content}}</p>
                 @foreach($news as $currentNews)
                     <a  class="none" href="news/{{$currentNews->id}}">
                         <div class="d-flex w-100" style="gap: 12px; margin-top: 24px;">
-                            <img src="{{\Illuminate\Support\Facades\Storage::url($currentNews->image)}}" width="132px" style="border-radius: 12px; height: 105px;" alt="">
+                            <img src="{{\Illuminate\Support\Facades\Storage::url($currentNews->image)}}" width="132px" style="border-radius: 12px; height: 105px; min-width: 132px; max-width: 132px;" alt="">
                             <div>
                                 <p style=" margin-bottom: 4px; font-size: 14px; color: var(--Light-White, #E4E4E4); overflow: hidden;display: -webkit-box;
 -webkit-box-orient: vertical;
@@ -261,7 +261,7 @@ align-self: stretch;">
 
 @if($ad->status=='on')
                 <a href="{{$ad->link}}">
-                    <img style="margin-top: 48px; width: 100%; height: 163px" src="{{\Illuminate\Support\Facades\Storage::url($ad->image)}}" alt="">
+                    <img style="margin-top: 48px; width: 100%; height: 163px; border-radius: var(--24px, 24px);" src="{{\Illuminate\Support\Facades\Storage::url($ad->image)}}" alt="">
                 </a>
 @endif
 
@@ -273,7 +273,7 @@ align-self: stretch;">
             <div class="search-mobile">
                 @foreach($news as $currentNews)
                     <div class="d-flex w-100" style="gap: 12px; margin-top: 24px;">
-                        <img src="{{\Illuminate\Support\Facades\Storage::url($currentNews->image)}}" style="border-radius: 12px;" alt="">
+                        <img src="{{\Illuminate\Support\Facades\Storage::url($currentNews->image)}}" style="border-radius: 12px;max-width:132px; min-width:132px" alt="">
                         <div>
                             <p style=" margin-bottom: 4px; font-size: 14px; color: var(--Light-White, #E4E4E4); overflow: hidden;display: -webkit-box;
 -webkit-box-orient: vertical;
@@ -316,7 +316,7 @@ align-self: stretch;">
             <div class="search-mobile">
                 @foreach($news as $currentNews)
                     <div class="d-flex w-100" style="gap: 12px; margin-top: 24px;">
-                        <img src="{{\Illuminate\Support\Facades\Storage::url($currentNews->image)}}" width="132px" style="border-radius: 12px; height: 105px;" alt="">
+                        <img src="{{\Illuminate\Support\Facades\Storage::url($currentNews->image)}}" width="132px" style="border-radius: 12px; height: 105px;max-width:132px; min-width:132px" alt="">
                         <div>
                             <p style=" margin-bottom: 4px; font-size: 14px; color: var(--Light-White, #E4E4E4); overflow: hidden;display: -webkit-box;
 -webkit-box-orient: vertical;
@@ -350,7 +350,7 @@ align-self: stretch;">
                 @endforeach
             </div>
 
-            <div class="d-flex justify-content-between search-computer" style="margin-top: 48px; ">
+            <div class="none-mobile justify-content-between" style="margin-top: 48px; ">
                 <div class="" style="width: 66%;">
                     <div class="d-flex align-items-center" style="gap: 8px; margin-bottom: 24px;">
                         <img src="{{asset('images/design/tich-v/icon-news.png')}}" alt="">

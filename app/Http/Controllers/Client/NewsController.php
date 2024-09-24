@@ -18,7 +18,9 @@ class NewsController extends Controller
 {
     public function index()
     {
-        $news = News::orderBy("created_at", "desc")->take(5)->get();
+        $news = News::orderBy("created_at", "desc")->take(5)
+        ->where('status', 2)
+        ->get();
 
         $newsLastWeek = News::orderBy("created_at", "desc")->take(3)->get();
         $categories = Category::get();
@@ -29,7 +31,7 @@ class NewsController extends Controller
 
     public function show($id)
     {
-        $news = News::findOrFail($id);
+        $news = News::findOrFail($id)->where('status', 2)->first();
         $arrKeywords = explode(",", $news->keywords);
         SEOTools::setTitle($news->title);
         SEOMeta::setDescription($news->description);
@@ -52,6 +54,7 @@ class NewsController extends Controller
     {
         $news = News::skip($request->offset)
             ->orderBy("created_at", "desc")
+            ->where('status', operator: 2)
             ->take(8)->get();
 
         return response()->json($news);

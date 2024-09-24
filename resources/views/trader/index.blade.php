@@ -13,7 +13,7 @@ check kĩ admin trước khi giao dịch để tránh giả mạo!!!')
 
 @section('content')
 
-    <div class="cangiua d-flex list-trader" style="margin-top: 60px; flex-wrap: wrap; gap: 24px">
+    <div class="cangiua d-flex list-trader" style="margin-top: 60px; flex-wrap: wrap; gap: 24px; transform: translateY(-139px);">
 
          @foreach($traders as $trader)
             <a href="{{route('traders.show', $trader->id)}}">

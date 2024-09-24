@@ -17,11 +17,10 @@
 <div class="cangiua">
     <div class="row">
         <div class="col-xl-8">
-            <div style="display:flex"><img class="image-show-news" src="{{\Illuminate\Support\Facades\Storage::url($news->image)}}" alt=""></div>
-            <div class="text-show-news" style="font-weight: 300; margin-top: 24px;font-size: 14px;">
-                <h3 style="margin: 24px 0">{{$news->title}}</h3>
-                <div class="d-flex" style="gap: 24px">
-                    <div class="d-flex align-items-center" style="gap: 4px">
+            <div class="text-show-news" style="font-weight: 300;font-size: 14px;">
+                <h3 style="margin-bottom: 24px;">{{$news->title}}</h3>
+                <div class="d-flex" style="gap: 24px ;margin-bottom: 24px;">
+                    <div class="d-flex align-items-center" style="gap: 4px; ">
                         @php
                             $date = explode(' ', $news->created_at);
                             $arrDate = explode('-', $date[0]);
@@ -50,6 +49,9 @@
                             margin-bottom: unset;"> {{$news->viewers}} lượt xem </p>
                     </div>
                 </div>
+
+            <div style="display:flex"><img class="image-show-news" src="{{\Illuminate\Support\Facades\Storage::url($news->image)}}" alt=""></div>
+
 
                 <hr style="margin-top: 25px">
                 <p class="" style="white-space: pre-wrap; font-weight: 300; margin-top: 24px;color: var(--w-60, rgba(255, 255, 255, 0.60)); font-size: 14px">{!! $news->content!!}

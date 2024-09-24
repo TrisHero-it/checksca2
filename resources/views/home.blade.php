@@ -426,7 +426,7 @@
                                         <div class="text w-100" style="margin-top: -13px;
     color: var(--Light-White, #9E9E9E);
     font-size: 14px;">
-                                            {!! $new->content !!}
+                                            {{$new->content}}
                                         </div>
                                         @php
                                             $date = explode(' ', $new->created_at);

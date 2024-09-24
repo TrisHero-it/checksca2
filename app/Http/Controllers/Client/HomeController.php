@@ -36,8 +36,9 @@ class HomeController extends Controller
             ->orderBy('id', 'desc')
             ->get();
 
-        $news = News::orderBy('id', 'desc')
+        $news = News::orderBy('id', 'asc')
             ->take(4)
+            ->where('status', 2)
             ->Get();
 
         $contacts = Contract::get();
@@ -47,6 +48,7 @@ class HomeController extends Controller
         $detailContracts = DetailContract::take(7)->orderByDesc('id')->get();
 
         $traders = Trader::get();
+
 
         return view('home', compact('posts', 'communities', 'news', 'contacts', 'detailContracts', 'ads', 'categories', 'traders'));
     }

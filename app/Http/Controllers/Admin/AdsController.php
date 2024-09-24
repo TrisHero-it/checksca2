@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Storage;
 
 class AdsController extends Controller
 {
-    const IMAGE_PATH = 'public/ads';
+    const IMAGE_PATH = 'public/muakeys';
     public function index()
     {
         $ads = Ad::query()->where('page' , 'home')->get();

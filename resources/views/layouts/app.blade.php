@@ -254,9 +254,9 @@
 
                 @if (isset($muakey))
 
-                <div class="cangiua d-flex list-ads no-scroll" style="overflow: auto; margin: 24px auto;">
+                <div class="cangiua d-flex aaa no-scroll" style="overflow: auto; margin: 24px auto;">
                @foreach ($ads as $ad)
-               <div class="ads">
+               <div >
                     <a href="{{$ad->link}}">
                         <img src="{{\Illuminate\Support\Facades\Storage::url($ad->image)}}" alt="" style="width: 282px; height: 128px; border-radius: 16px;">
                     </a>
@@ -268,7 +268,7 @@
 <!-- Start categories -->
                 @if (isset($category2))
                 <div class="cangiua">
-                        <div class="d-flex flex-wrap category2">
+                        <div class="d-flex flex-wrap category2" style="padding-bottom:136px">
                             @php
                                 $cate =$_GET['cate']??0
                             @endphp

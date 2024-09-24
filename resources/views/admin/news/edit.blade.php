@@ -46,6 +46,21 @@
                     </div>
 
                     <div class="mb-3">
+                    <label class="form-label" for="exampleInputEmail1">Trạng thái</label>
+                        <select name="status" class="form-select" id="">
+                            <option @if ($news->status== 0)
+                                selected
+                            @endif value="0">Waiting</option>
+                            <option @if ($news->status== 1)
+                                selected
+                            @endif value="1">Cancel</option>
+                            <option @if ($news->status== 2)
+                                selected
+                            @endif value="2">Allow</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
                         <label
                             class="col-form-label col-lg-4 col-sm-12">Tags</label>
                         <select class="form-control" onchange="Category(this.value)" data-trigger name="" id="choices-multiple-default" multiple>
